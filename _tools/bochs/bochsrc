@@ -9,8 +9,7 @@ vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
 
 # boot from fd
 boot: floppy
-floppy_bootsig_check: disabled=0
-floppya: type=1_2, 1_2="./boot.img", status=inserted, write_protected=0
+floppya: type=1_44, 1_44=boot.img,  status=inserted
 
 # 设置日志文件
 log: bochsout.txt
@@ -20,9 +19,6 @@ mouse: enabled=0
 
 # 打开键盘
 keyboard: type=mf, serial_delay=250
-
-# 设置硬盘
-ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
 
 # 添加gdb远程调试支持
 # gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0

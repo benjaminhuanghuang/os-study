@@ -8,8 +8,5 @@ install: boot.bin
 run: install
 	bochs -f bochsrc
 
-run2: install
-	qemu-system-x86_64 -fda boot.bin -boot a
-
 clean:
 	rm -rf *.bin

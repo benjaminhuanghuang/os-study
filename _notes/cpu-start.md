@@ -1,9 +1,10 @@
 
 
-
-开机后，CPU 的CS: IP 寄存器被强制初始化为`0xFFFF : 0x0000`。
 ![](./_images/8086-start.png)
 
+
+80386之后的CPU开机后，CPU 的CS: IP 寄存器被强制初始化为`0xF000 : 0xFFF0`。
+![](./_images/cpu-start-bochs.png)
 此时 CPU处于实模式  会从`0xFFFF0` 取指令并执行
 
 实模式只能访问1MB 空间(20 位地址线，2^20=1MB = 0xFFFFF) 而地址0xFFFF0 距1MB 只有16 个字节
